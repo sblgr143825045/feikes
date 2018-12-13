@@ -1,0 +1,25 @@
+img{border:none;}
+.kf-frontend-css{ font-size:12px; font-family:"微软雅黑";}
+.kf-frontend-css a{ text-decoration:none; color: #428bca;}
+.kf-frontend-css img{ vertical-align:middle;}
+.kf-frontend-css .float-right {float: right;}
+.kf-frontend-css h4{font-size: 18px;}
+.kf-frontend-css p{text-align:left; margin:0;}
+.kf-frontend-css .set-icons{ width:100%; text-align:center;}
+.kf-frontend-css .set-invite{ width:100%; text-align:center;}
+.kf-frontend-css .set-icons a{ text-decoration:none;}
+
+.set-list-4{ width:145px; box-shadow:0 0 10px 2px #ccc; border:1px solid #ccc; overflow:hidden;}
+.set-list-4 .set-list-4-bg{height:45px; line-height:45px; background:#dcdcdc; padding-left:0; text-align:center; font-size:20px; font-weight:bold;}
+.set-list-4-list{ background: #FFFFFF;padding:2px 7px;}
+.set-list-4-list a{ text-align:left; display:block; height:35px; padding:0 10px; line-height:35px; color:#000; border-bottom:1px dashed #ddd;}
+.set-list-4-list a img{ margin-right:5px;width: 16px;height: 16px;}
+.set-list-4-copyright{ line-height:40px; color:#aaa; background:#f5f5f5; text-align: center;}
+.set-invite-mobile-4{ background:url(../../frontend/themes/4/image/set-invite-4-bg.png) no-repeat; background-size: 100%;width:700px; height:350px; margin:0 auto;}
+.set-invite-mobile-4 .set-invite-mobile-4-top{ height:55px; font-size:30px; line-height:55px; padding:0 15px;}
+.set-invite-4 .set-invite-4-bottom{ padding:0 10px;}
+.set-invite-4 .set-invite-4-bottom a{ color:#999;}
+.set-invite-mobile-4-center{ background:url(../../frontend/themes/4/image/set-invite-4-icon.png) no-repeat 25px center; background-size: 200px 220px;height:260px; padding-left:250px; vertical-align:top;}
+.set-invite-mobile-4-center h4{ padding-left:20px;font-size:35px;margin:0; text-align:left; line-height:70px; font-weight:bold; font-family:"微软雅黑";}
+.set-invite-mobile-4-center p{ padding-bottom:20px; margin:0; padding-left:0;}
+.set-invite-mobile-4-center .text{padding-left:20px;font-size:25px;min-height:70px;text-align:left;word-wrap:break-word;}

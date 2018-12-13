@@ -1,0 +1,147 @@
+.content{
+	width:100%;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+.shed{
+	width:1240px;
+	height:52px;
+	margin:0 auto;
+}
+.tab{
+	width:1240px;
+	margin:0 auto;
+	border-spacing:0px;
+	margin-top:15px;
+}
+.firstline{
+	background-color:#dee0e2;
+	height:40px;
+	margin-bottom:25px;
+}
+.secondline{
+	border-bottom:1px solid gray;
+}
+.sectd{
+	width:687px;
+	height:140px;
+	/*border-bottom:1px solid gray;*/
+}
+#bg1{
+	width:120px;
+	height:120px;
+	float:left;
+}
+.p1{
+	float:left;
+	margin-top:80px;
+	margin-left:20px;
+}
+.thtd a{
+	float:left;
+	width:28px;
+	height:28px;
+	text-align:center;
+	border:1px solid gray;
+	color:gray;
+}
+.thtd input{
+	float:left;
+	width:74px;
+	height:26px;
+	text-align:center;
+	border-right:0px
+	border-left:0px
+	outline:none;
+}
+.line{
+	width:1240px;
+	height:1px;
+	background-color:gray;
+}
+.clear{
+	width:1240px;
+	height:30px;
+	margin:0 auto;
+	border-top:1px solid gray;
+	padding-top:20px;
+}
+.clear span{
+	font-size:14px;
+	color:gray;
+}
+.sum{
+	width:1240px;
+	margin:0 auto;
+	height:50px;
+}
+.sum a{
+	float:left;
+	width:147px;
+	height:36px;
+	border:1px solid gray;
+	text-align:center;
+	line-height:36px;
+	color:black;
+	background-color:orange;
+}
+.sum a:first-child{
+	margin-left:942px;
+	background-color:gray;
+}
+.suma{width:1240px;
+	margin:0 auto;
+	height:100px;
+	line-height: 125px;
+	text-align: right;
+}
+#font{
+	font-size:30px;
+	color:orange;
+	margin-left:30px;
+}
+/*后面添加*/
+#mask{  
+    position: absolute; 
+    top: 0px; 
+    filter: alpha(opacity=60);
+     background-color: black;
+    z-index: 1002;
+     left: 0px;
+    opacity:0.5; 
+    -moz-opacity:0.5;
+}
+.win{
+	position: fixed; 
+	z-index: 1003; 
+ 	width:592px;
+ 	 height:205px; 
+ 	 text-align:center;
+   	background-color:white;
+   	display: none;
+}
+.win h3{
+	font-weight:100;
+	font-size:24px;
+}
+.pagess{
+	float:left;
+	width:120px;
+	height:50px;
+	line-height:50px;
+	background-color:#0a7ae3;
+	margin-left:174px;
+	text-align:center;
+	color:white;
+	cursor:pointer;
+}
+.close{
+	float:left;
+	width:120px;
+	height:50px;
+	line-height:50px;
+	cursor:pointer;
+	background-color:gray;
+	text-align:center;
+	color:white;
+}

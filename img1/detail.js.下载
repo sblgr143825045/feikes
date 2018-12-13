@@ -1,0 +1,266 @@
+$(document).ready(function() {
+	$(".add").click(function() {
+		$obj = $(this).prev("input[type='text']");
+		var num = parseInt($obj.val());
+		if (isNaN(num)) {
+			$obj.val(1);
+		} else {
+			$obj.val(num+1);
+		}
+		//$("#choose_num").val(num+1);
+	});
+	$(".reduce").click(function() {
+		$obj = $(this).next("input[type='text']");
+		var num = parseInt($obj.val());
+		if (num <= 1)
+		{
+		return false;
+		}
+		if (isNaN(num)) {
+			$obj.val(1);
+		} else {
+			$obj.val(num-1);
+		}
+	});
+	
+    var options = {
+        zoomWidth: 320,
+        zoomHeight: 280,
+        showEffect:'show',
+        hideEffect:'hide',
+        fadeoutSpeed: 'slow',
+        title :false,
+        yOffset:0,
+        showPreload:false
+    }
+	$("#jqzoom").jqzoom(options);	
+    $('.image_list img').click(function(){
+    	if($(this).attr('source')!='')
+		$('#current_img').attr('src', $(this).attr('source'));
+    	if($(this).attr('original')!='')
+        $('#current_img').parent().attr('href', $(this).attr('original'));	
+        $(".picList").find('li').removeClass('current');
+		$(this).parent().parent().addClass('current');
+    });  
+    $(".color_img").click(function(){
+    	if($(this).attr('source')!='')
+    		$('#current_img').attr('src', $(this).attr('source'));
+		if($(this).attr('original')!='')
+			$('#current_img').parent().attr('href', $(this).attr('original'));	
+		$(".image_list").hide().removeClass('current');
+		$("li[class='image_list'][code='"+$(this).attr('code')+"']").show();
+		$(".image_list:visible").eq(0).addClass("current");
+		//重置图片滚动列表
+		var lUl = $(".picList>ul");
+		lUl.css("left","0");
+		$('.btnNext').addClass("next-disabled");
+			if($('li:visible',lUl).size()<=4){
+				$('.btnPrevious').addClass("prev-disabled");	
+			}else{
+				$('.btnPrevious').removeClass("prev-disabled");
+			}
+    }); 
+	
+});
+
+function add_shop_cart(obj) {
+	var choose_num = $("input[name='choose_num']").val();
+	var actural_num = parseInt($("#actual_number").html());
+	if(actural_num <=0) {
+		baison.alert('对不起，该商品库存不足！');
+		return false;
+	}
+	if(choose_num <= 0) {
+		baison.alert('购买的数量必须为正整数');
+		return  false;
+	}
+	if(choose_num>actural_num){
+		baison.alert('对不起，该商品库存不足！');
+		return false;
+	}
+	
+	Ajax.call('/index.php?app_act=goods/check_cart_sum&app_fmt=json&app_page=null', '', 
+		function (s){
+			if(s.code==1){
+				baison.alert(s.msg);
+			}else{
+				go_to_cart(sku,choose_num,goods_price,goods_type,obj);
+			}
+		}	, 'GET', 'json'); 
+}
+function go_to_cart(sku,choose_num,goods_money, action,gotype) {
+	if(sku !='') {
+		var url='/index.php?app_act=goods/add_product_to_cart&app_page=null&app_fmt=json&process_type='+gotype;
+		url+='&sku_sn='+encodeURI(sku.substring(1, sku.length-1),'UTF-8');
+		url+='&ext_attr_info='+encodeURI(ext_attr_info,'UTF-8');
+		url+='&choose_num='+choose_num;
+		url+='&price='+goods_money;
+		url+='&action='+action;
+		url+='&type='+action;
+		if(action=='second'){
+			url+='&checknumber='+$('#checknumber_spkie').val();
+		}
+		ajaxcheck('open_title',url,'',action,gotype,goods_sn);
+	}else {
+		baison.alert('赠品不能购买');
+	}
+}
+function go_comment(user_id) {
+	if (user_id == '') {
+		$('#vCode').click();
+		$('#popdiv').show();
+	} else {
+		if ($("#commment_form").css('display') == 'none') {
+			Ajax.call('/index.php?app_act=goods/check_buy&app_page=null&goods_sn='+goods_sn, '', 
+					function (s){
+						s=eval('('+s+')');	
+						if(s.code == 0) {
+							$("#commment_form").show();
+						} else {
+							baison.alert(s.msg);
+						}
+					}	, 'GET', ''); 			
+		} else {
+			$("#commment_form").hide();
+		}
+	}
+}
+function go_show_order(user_id) {
+	if (user_id == '') {
+		$('#vCode').click();
+		$('#btn_login').click();
+	} else {
+		if ($("#show_order_comment").css('display') == 'none') {
+			Ajax.call('/index.php?app_act=goods/check_show_order_buy&app_page=null&goods_sn='+goods_sn, '', 
+					function (s){
+						s=eval('('+s+')');	
+						if(s.code == 0) {
+							$("#show_order_comment").show();
+						} else {
+							baison.alert(s.msg);
+						}
+					}	, 'GET', ''); 
+		} else {
+			$("#show_order_comment").hide();
+		}
+
+	}
+}
+
+function send_mail_to_user(user_id){
+	if(user_id) {
+		var str = '';
+		var sku_sn = goods_sn;
+		$("a[type='ext_attr']").each(function () {
+			if($(this).attr('selected')) {
+				sku_sn = sku_sn + $(this).attr('code');
+				str = str+ '&'+$(this).attr('name')+'='+$(this).attr('code');
+			}
+		})
+		str ='&user_id='+user_id+'&goods_sn='+goods_sn+'&sku_sn='+sku_sn +str;
+		Ajax.call('/index.php?app_act=goods/record_user_to_base&app_page=null&app_fmt=json', str, 
+			function (s){
+				baison.alert(s.msg);
+			}	, 'GET', 'json'); 
+	}else {
+		//$("#btn_login").click();
+		baison.alert("请先登录",function(){
+			location.href='/user/index/';
+		});
+		
+	}
+}
+
+function show_send_promo_notice(user_id,goods_sn){
+	if( user_id ){
+		var email_reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+		if( !email_reg.test( user_id ) ){
+			user_id = false;
+		}
+	}
+	baison.prompt('请输入正确的邮箱地址！',function(e){
+		if (e){
+			var email_reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+			if( !email_reg.test( e ) ){
+				baison.alert('请输入正确的邮箱地址！');
+			}else{
+				send_promo_notice(user_id,goods_sn,e);
+			}
+		}
+	},{'value':user_id});
+}
+
+function send_promo_notice(user_id,goods_sn,send_email){
+	
+	url = '/index.php?app_act=goods/send_promo_notice&app_page=null&app_fmt=json' ;
+	params = '&goods_sn='+goods_sn+'&send_email='+send_email;
+	//params = '&goods_sn='+goods_sn+'&telephone='+telephone;
+	Ajax.call( url , params ,
+			function( s ){
+				s=eval('('+s+')');	
+				if( s.code ){
+					baison.alert(s.msg);
+				}else{
+					baison.alert(s.msg);
+					$("div.p_goods_detail").find('p.close').click();
+				}
+	} , 'get' , 'JSON' );
+}
+function add_suit_to_cart(){
+	if($('#gourp_select_'+goods_sn)) {
+		$("#group_result").html('');
+		var all_product_ext =  new Array(all_names.length);
+		for(var k = 0; k < all_product_ext.length; k++) {
+			all_product_ext[k] = '';
+		}
+		$("a[name][value]").each(function(){
+			if($(this).attr('selected'))
+				all_product_ext[$(this).attr('index')] = $(this).attr('value');
+		})
+		var select_product_str = all_product_ext.join(',');
+		var select_sku_index = $.inArray(select_product_str, all_value_arr);
+		var select_goods = [];
+		var select_sku = ''; //sku的值
+		if( select_sku_index >= 0) {
+			select_sku = all_inventory_skus[select_sku_index].substring(1, all_inventory_skus[select_sku_index].length-1);
+		}
+		/*
+		if(select_sku == '') {
+			alert('首件商品为必选');
+			return false;
+		}
+		*/
+		var group_sku = [];
+		var group_code = '';
+		$('input[type="checkbox"][name="group_proudcts"]:checked').each(function(i,v){
+			group_sku[i] = $(this).attr('group_sku');
+			select_goods[i] = $(this).attr('gs');
+			group_code = $(this).attr('group_code');
+		})
+		if(group_sku.length == 0) {
+			//$("#group_result").html('请至少保留两件商品');
+			baison.alert('请至少保留两件商品');
+			return false;
+		}
+		
+		if(select_sku != '') {
+			group_sku.push(select_sku);
+			select_goods.push(goods_sn);
+		}
+		$.getJSON( '/goods/add_suit_product?app_page=null&app_fmt=json' , {suit_code: group_code,suit_skus:group_sku.join('_'), goods_sns:select_goods.join('_')} ,
+			function( data ){
+				if(data.code == 7) {
+					baison.alert(data.msg);			
+				}else {
+					if($("#div_popup").length > 0 ) {
+						data.msg += '\n<a href="/">前往首页</a>&nbsp;&nbsp;&nbsp;<a href="javascript:histroy.back();">返回</a>';
+						baison.alert(data.msg);
+					} else {
+						add_car_success();
+						$.get("/?app_act=index/get_cart_info&"+ Math.random(),"",function(data){$('#topcart_info').html(data)},"html");
+					}
+			   }
+		    });
+	}
+}
+

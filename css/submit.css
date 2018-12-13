@@ -1,0 +1,30 @@
+.content{
+	width:100%;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+.shed{
+	width:1240px;
+	height:52px;
+	margin:0 auto;
+}
+.box{
+	width:100%;
+	margin-top:50px;
+	margin-bottom:30px;
+}
+.box1{
+	width:1240px;
+	margin:0 auto;
+	margin-left:480px;
+	margin-top:90px;
+}
+.box1 p{
+	font-size:16px;
+}
+.box1 input{
+	width:208px;
+	height:32px;
+	outline:none;
+	margin-top:15px;
+}

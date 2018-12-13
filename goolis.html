@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>goodlis</title>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="css/goodlist.css">
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+</head>
+<body>
+	<div id="mask" class="mask"></div>
+	<!-- header -->
+	<header>
+		<div class="header_top">
+			<div class="header_left">
+				<i class="iconfont icon-wujiaoxing-copy"><a href="#">收藏</a></i>
+				<i class="iconfont icon-yingdaicon04" id="w"><a  class="wx" href="#">微信</a>
+			<!-- 	<img id="im1" src="img/weixin.jpg" alt=""> -->
+				</i>
+
+			</div>
+			<div class="header_right">
+				<a class="fa" href="login.html">登录</a>|
+				<a class="la" href="regist.html">注册</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- section -->
+	<section>
+	<div class="sect">
+		<div class="sec">
+				<img id="im1" src="img/weixin.jpg" alt="">
+				<img onclick="location='index.html'" class="limg" src="img/logo.gif">
+				<a class="home">
+					<img class="himg" src="img/home.jpg"><span>首页</span>
+				<a>
+				
+				<form class="tex">
+					<a class="knief" href="#">剃须刀</a>
+					<a class="wind" href="#">电吹风</a>
+					<input  placeholder="剃须刀" class="inp" type="text"/>
+					<div class="search">
+						<a href="#"><img src="img/searchbg.png"></a>
+					</div>
+				</form>
+				<div class="dog" style="height:55px;width:1px;float:left;background-color:#288fe7;margin-top:35px;margin-left:18px;opacity:0"></div>
+				<div class="shopcar">
+					<a id="sh" href=""><img id="cs1" src="img/cartp.png"></a>
+					<a id="sc" href="shopcar.html">购物车(<span id="c1">0</span>)</a>
+					<div id="lis">
+						<div id="liss">
+							<!-- <div class="infor" style="width:295px;height:100px">
+								<div class="inform" style="margin-left:10px;float:left">
+									<div class="imp" style="float:left">
+										<img src="img/FS375_000_01.jpg" style="width:80px;height:80px;float:left" alt="">
+										<h4 style="float:left;color:black"><span>飞科智能剃须刀FS375</span></h4>
+									</div>
+								</div>
+								<p class="words" style="margin-left:20px;margin-top:10px;float:left"><span>139</span>元x<span>1</span></p>
+							</div> -->
+
+							<div style="width:295px;height:45px">
+								<div class="fq" style="float:left;">
+									<h1>共计<span id="c2">0</span>件商品</h1>
+									<p>合计：<span id="c3">0</span>元</p>
+								</div>
+								<input onclick="location='shopcar.html'" style="float:left;"" class="ut" type="button" value="去购物车结算">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dog1" style="height:56px;width:1px;float:left;background-color:#288fe7;margin-left:-1px;margin-top:35px;opacity:0"></div>
+			</div>
+	</section>
+	<div class="goodlists">
+		<div class="index">
+			<p>首页/飞科智能剃须刀FS375</p>
+		</div>	
+	</div>
+	<div class="lists">
+		<div class="lt">
+		<div class="li">
+			<div class="list">
+				<div id="bigBox">
+					<img  id="simg" src="img1/FS375_000_01.jpg" alt="" style="width:372px;height:368px">
+					<div id="mirrorBox">
+					</div>
+					<div id="showBox">
+						<!-- <img src="img/FS375_000_01.jpg" alt="" style="width:744px;height:736px;display: none"> -->
+					</div>
+				</div>
+			</div>
+			<div class="slide">
+				<ul class="uls">
+						<a href="#"></a>
+						<li class="cn"><img src="img/FS375_000_01.jpg" alt=""></li>
+						<li class="cn" ><img src="img1/FS375_000_02.jpg" alt=""></li>
+						<li class="cn"><img src="img1/FS375_000_03.jpg" alt=""></li>
+						<li class="cn"><img src="img1/FS375_000_04.jpg" alt=""></li>
+						<li class="cn"><img src="img1/FS375_000_05.jpg" alt=""></li>
+						<a href="#"></a>
+				</ul>
+			</div>
+		</div>
+		<div class="lis">
+			<div class="title">
+				<div class="titles">
+					<h3 id="fk">飞科智能剃须刀FS375</h3>
+					<p>【爆款特卖】闪耀巨献 大气优雅 全新设计理念 精雕细作 完美升级</p>
+					<p>【功能特点】全身水洗七级防水 智能操控 双环三头极速浮动剃须 USB充电 1小时快速充电</p>
+					<p>【品质保证】官方商城品质保证　7天无理由退货 15天无理由换货 全国联保2年 售后无忧放心购买</p>
+				</div>
+				<div class="tit">
+					<p>商城价：<span>339</span>元</p>
+					<h3>到手价:￥<span id="hand">139.00</span></h3>
+				</div>
+				<div class="comment">
+					<p>客户评价:<span>480</span>评价</p>
+					<p>商品累计月销量<span style="color:orange">31697</span></p>
+					<div class="count">
+						<span>购买数量：</span>
+						<input type="button" value="-" class="del" style="margin-left:10px">	
+						<input type="text" id="numb" value="1">
+						<input type="button" value="+" class="add">	
+						<span style="margin-left:34px">库存</span>
+						<span class="store">95309</span>件
+					</div>
+				</div>
+				<div class="menu">
+					<a id="buynow" href="shopcar.html">立即购买</a>
+					<a id="car"href="javascript:;">加入购物车</a>
+				</div>
+				<div>
+					<ul class="free"><li><b>.</b>&nbsp&nbsp全场免运费（部分配件除外)</li>
+					</ul>
+				</div>
+				<div class="collect">
+					<img src="img/collectbg.png" style=" padding-top:3px;float:left;vertical-align: middle;" alt=""><a href="" style="color:black;font-size:14px;margin-left:5px;float:left">收藏该商品</a>
+					<div class="bdsharebuttonbox" style="display: inline-block;margin-left:20px;vertical-align: middle;"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a></div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!-- goods -->
+	<div class="goods">
+		<div class="good" >
+			<ul class="data">
+				<li  id="ib" style="opacity:0">
+					<img src="img/FS375_000_01.jpg" style="width:49px;height:49px;" alt="">
+				</li>
+				<li id="price" style="opacity:0">
+				<p>飞科智能剃须刀FS375</p>
+				<p>139.00</p>
+				</li>
+				<li><a class="a1" href="#t">商品详情</a></li>
+				<li><a class="a2" href="#t1">商品参数</a></li>
+				<li><a class="a3" href="#t2">商品评价</a></li>
+				<li><a class="a4" href="#t3">售后服务</a></li>
+				<li id="buy" style="opacity:0">
+					<div class="menu menus" >
+						<a href="">立即购买</a>
+						<a href="">加入购物车</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="imgsb">
+		<div class="imgg">
+			<img id="t" src="img1/1.jpg" alt="">
+			<img src="img1/2.jpg" alt="">
+			<img src="img1/3.jpg" alt="">
+			<img src="img1/4.gif" alt="">
+			<img src="img1/5.jpg" alt="">
+			<img src="img1/6.jpg" alt="">
+			<img src="img1/7.jpg" alt="">
+			<img src="img1/8.jpg" alt="">
+			<img src="img1/9.jpg" alt="">
+			<img src="img1/10.jpg" alt="">
+			<img src="img1/11.gif" alt="">
+			<img src="img1/12.jpg" alt="">
+			<img id="t1" src="img1/FS375.jpg" alt="">
+			<img id="t2" src="img1/1(1).jpg" alt="">
+			<img id="t3" src="img1/2(1).jpg" alt="">
+
+		</div>
+	</div>
+	<div class="judge">
+		<div class="judges">
+			<div class="head">
+				<div class="head1"></div>
+				<p>商品评价</p>
+				<div class="head2"></div>
+			</div>
+			<div class="d" style="width:1240px">
+			<div class="ju" style="height:136px;width:1240px;margin:0 auto;background-color:#f5f5f5">
+				<h2 style="font-size:27px;margin-left:91px;color:black;margin-right:28px;float:left;margin-top:33px">好评度:</h2>
+				<span style="float:left;margin-right:24px;font-size:45px;color:red;margin-top:20px">95%</span>
+				<div style="height:109px;width:2px;background-color:gray;float:left;margin-top:6px"></div>
+				<h2 class="seller">买家印象:</h2>
+				<div class="box">
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+					<a href="javacript:void(0)">外观漂亮（128）</a>
+				</div>
+				<div style="height:109px;width:2px;background-color:gray;float:left;margin-top:6px;margin-right:50px;"></div>
+				<div class="faqi">
+					<a href="">发起评价</a>
+				</div>
+			</div>
+			<div class="grade">
+				<a href="">全部评价(480)</a>
+				<a href="">晒图(23)</a>
+				<a href="">好评(460)</a>
+				<a href="">中评(11)</a>
+				<a href="">差评(9)</a>
+			</div>
+			<div class="date">
+				<div class="dates">
+					<div class="st">
+						<div class="star">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+						</div>
+						<div class="word" style="font-size:12px">
+							<b>评论内容</b>:这是什么垃圾东西！第一次买来就坏了！
+						</div>
+					</div>
+					<div class="bt">
+						<div class="vip">
+							<img src="img/nlv1.jpg" alt="">
+							<span>普通会员</span>
+						</div>
+						<div class="num">【1328****56】</div>
+						<div class="da">2018-12-02 20:16:25</div>
+					</div>
+				</div>
+				<div class="dates">
+					<div class="st">
+						<div class="star">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+						</div>
+						<div class="word" style="font-size:12px">
+							<b>评论内容</b>:这是什么垃圾东西！第一次买来就坏了！
+						</div>
+					</div>
+					<div class="bt">
+						<div class="vip">
+							<img src="img/nlv1.jpg" alt="">
+							<span>普通会员</span>
+						</div>
+						<div class="num">【1328****56】</div>
+						<div class="da">2018-12-02 20:16:25</div>
+					</div>
+				</div>
+				<div class="dates">
+					<div class="st">
+						<div class="star">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+						</div>
+						<div class="word" style="font-size:12px">
+							<b>评论内容</b>:这是什么垃圾东西！第一次买来就坏了！
+						</div>
+					</div>
+					<div class="bt">
+						<div class="vip">
+							<img src="img/nlv1.jpg" alt="">
+							<span>普通会员</span>
+						</div>
+						<div class="num">【1328****56】</div>
+						<div class="da">2018-12-02 20:16:25</div>
+					</div>
+				</div>
+				<div class="dates">
+					<div class="st">
+						<div class="star">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+						</div>
+						<div class="word" style="font-size:12px">
+							<b>评论内容</b>:这是什么垃圾东西！第一次买来就坏了！
+						</div>
+					</div>
+					<div class="bt">
+						<div class="vip">
+							<img src="img/nlv1.jpg" alt="">
+							<span>普通会员</span>
+						</div>
+						<div class="num">【1328****56】</div>
+						<div class="da">2018-12-02 20:16:25</div>
+					</div>
+				</div>
+				<div class="dates">
+					<div class="st">
+						<div class="star">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+						</div>
+						<div class="word" style="font-size:12px">
+							<b>评论内容</b>:这是什么垃圾东西！第一次买来就坏了！
+						</div>
+					</div>
+					<div class="bt">
+						<div class="vip">
+							<img src="img/nlv1.jpg" alt="">
+							<span>普通会员</span>
+						</div>
+						<div class="num">【1328****56】</div>
+						<div class="da">2018-12-02 20:16:25</div>
+					</div>
+				</div>
+				<div class="dates">
+					<div class="st">
+						<div class="star">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+						</div>
+						<div class="word" style="font-size:12px">
+							<b>评论内容</b>:这是什么垃圾东西！第一次买来就坏了！
+						</div>
+					</div>
+					<div class="bt">
+						<div class="vip">
+							<img src="img/nlv1.jpg" alt="">
+							<span>普通会员</span>
+						</div>
+						<div class="num">【1328****56】</div>
+						<div class="da">2018-12-02 20:16:25</div>
+					</div>
+				</div>
+				<div class="dates">
+					<div class="st">
+						<div class="star">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+						</div>
+						<div class="word" style="font-size:12px">
+							<b>评论内容</b>:这是什么垃圾东西！第一次买来就坏了！
+						</div>
+					</div>
+					<div class="bt">
+						<div class="vip">
+							<img src="img/nlv1.jpg" alt="">
+							<span>普通会员</span>
+						</div>
+						<div class="num">【1328****56】</div>
+						<div class="da">2018-12-02 20:16:25</div>
+					</div>
+				</div>
+				<div class="dates">
+					<div class="st">
+						<div class="star">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+							<img src="img/commentstar.png" alt="">
+						</div>
+						<div class="word" style="font-size:12px">
+							<b>评论内容</b>:这是什么垃圾东西！第一次买来就坏了！
+						</div>
+					</div>
+					<div class="bt">
+						<div class="vip">
+							<img src="img/nlv1.jpg" alt="">
+							<span>普通会员</span>
+						</div>
+						<div class="num">【1328****56】</div>
+						<div class="da">2018-12-02 20:16:25</div>
+					</div>
+				</div>
+				<div class="dates" style="height:60px;">
+					<div class="page">
+						<a href="">1</a>
+						<a href="">2</a>
+						<a href="">3</a>
+						<a href="">4</a>
+						<a href="">5</a>
+						<a href="">6</a>
+						<a href="">7</a>
+						<a href="">8</a>
+						<a href="">9</a>
+						<a href="">10</a>
+						<a href="">
+							<span style="float:left;margin-left:8px">下一页</span>
+							<span style="float:left; margin-top:8px;margin-left:8px" id="t"></span>
+						</a>
+					</div>
+					<div class="go">
+						<span style="margin-top:25px;margin-right:10px">跳转到</span>
+						<input type="text">
+						<a class="aa" href="" style="margin-top:20px;margin-left:10px;">
+							<span style="float:left;margin-left:20px;margin-top:4px;">Go</span>
+							<span style="float:left;margin-left:8px;margin-top:8px" id="t"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="">
+				
+				<div class="head" style="margin-top:20px;font-weight:100">
+					<div class="head1"></div>
+					<p>售后服务</p>
+					<div class="head2"></div>
+				</div>
+				<div class="content">
+					<div class="contents">
+						<h5 style="color:orange;margin-top:10px">保修条例：</h5>
+						<p style="font-size:12px">飞科商城所售商品均为正品行货且有正规发票，飞科商城将严格按照国家三包政策，对所售商品提供7天（含）退货、15天（含）换货和二年保修服务。属于三包范围内的商品，保修期内您可以凭飞科商城发票和保修卡在全国各地飞科授权的售后服务中心享受保修服务。</p>
+						<p>一、一周内非人为因素并在下列条件下凭有效发票、有效收据凭条或有效售后服务卡包换。</p>
+						<p>1、包装完整、没有人为损坏。</p>
+						<p>2、发票、收据凭条或售后服务卡必须是有效的，并未被涂改。</p>
+						<p>3、同型号调换。</p>
+						<p>二、两年以内非人为因素损坏的，凭有效发票、有效收据凭条或有效售后服务卡享有免费保修服务。（易损件的正常更换除外）</p>
+						<p>三、两年以上或无法提供有效发票、有效收据凭条或有效售后服务卡，所有配件仅收配件费用，免收其它维修费用。 售后服务电话：400-887-8282</p>
+					</div>
+				</div>
+			</div>
+			<div class="recomm" style="padding-bottom:50px">
+				<div class="head" style="margin-top:20px;padding-bottom
+				:10px;font-weight:100">
+					<div class="head1"></div>
+					<p>推荐商品</p>
+					<div class="head2"></div>
+				</div>
+
+				<div class="pic">
+					<div>
+						<img src="img1/23.png">
+						<p>飞科剃须刀FS360</p>
+						<h6>T10</h6>
+					</div>
+					<div>
+						<img src="img1/23.png">
+						<p>飞科剃须刀FS360</p>
+						<h6>T10</h6>
+					</div>
+					<div>
+						<img src="img1/23.png">
+						<p>飞科剃须刀FS360</p>
+						<h6>T10</h6>
+					</div>
+					<div>
+						<img src="img1/23.png">
+						<p>飞科剃须刀FS360</p>
+						<h6>T10</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 此处赶上进度迫不得已 -->
+
+		</div>
+
+	<!-- foot -->
+	<div class="foot">
+		<div class="foots">
+			<div class="footss fooo">
+				<img src="img/ensure.png" alt="">
+				<span>领导品牌 品质保证</span>
+			</div>
+			<div class="footss">
+				<img src="img/return.png" alt="">
+				<span>七天退货 15天退货</span>
+			</div>
+			<div class="footss">
+				<img src="img/free.png" alt="">
+				<span>全场免运费（部分配件除外）</span>
+			</div>
+			<div class="footss foo">
+				<img src="img/unprofor.png" alt="">
+				<span>全国网点 联保服务</span>
+			</div>
+		</div>
+		<div class="service">
+			<ul>
+				<li>购物服务</li>
+				<li><a href="#">购物指南</a></li>
+				<li><a href="#">配送方式</a></li>
+				<li><a href="#">支付方式</a></li>
+			</ul>
+			<ul>
+				<li>服务支持</li>
+				<li><a href="#">积分规则</a></li>
+				<li><a href="#">保修政策</a></li>
+				<li><a href="#">服务网点</a></li>
+			</ul>
+			<ul>
+				<li>关注我们</li>
+				<li><a href="#">新浪微博</a></li>
+				<li><a href="#">关注微信</a></li>
+				<li><a href="#">APP下载</a></li>
+			</ul>
+			<ul>
+				<li>关于飞科</li>
+				<li><a href="#">飞科新闻</a></li>
+				<li><a href="#">飞科介绍</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+
+			<div class="mark">
+				<img src="img/qr_code.jpg" alt="">
+				<p>关注飞科电器官方微信</p>
+			</div>
+
+			<div class="mark1">
+				<img src="img/service1.png" alt="">
+			</div>
+		</div>
+		<div class="footer">
+			<img class="imgs" src="img/minilogo.jpg" alt="">
+			<div class="fm">
+				<p>Copyright © 2013-2016上海飞科电器股份有限公司 | 版权所有 | 网站备案许可证号：沪ICP备13041208号
+				<a href="#">增值电信营业厅经营许可证：沪B2-20160083 |<img src="img/fkab.png" alt="">公安网备案31010502001314</a>
+				</p>
+			</div>
+			<div class="sqa">
+					<a href="#"><img src="img/rightimg1.jpg" alt=""></a>
+					<span></span>
+					<a href="#"><img src="img/rightimg2.jpg" alt=""></a>
+					<span></span>
+					<a href="#"><img src="img/rightimg3.jpg" alt=""></a>
+					<span></span>
+					<a id="lm" href="#"><img src="img/rightimg4.jpg" alt=""></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="win">
+		<p id="cl" style="margin-left:500px;margin-top:20px;cursor:pointer;"><b>X</b></p>
+		<div style="width:592px;height:82px">
+			<img style="float:left;margin-top:27px;margin-left:190px;" src="img1/success.png" alt="">
+			<h3 style="float:left;margin-top:27px;margin-left:20px">成功添加至购物车</h3>
+		</div>
+		<div style="width:592px;height:105px;">
+			<span onclick="location='shopcar.html'" class="pagess">去购物车页面结算</span>
+			<span class="close">关闭页面</span>
+		</div>
+	</div>
+
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="js/cssTools.js"></script>
+<script type="text/javascript" src="js/goodljquery.js"></script>
+<script type="text/javascript" src="js/cookieTools.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+
+<script type="text/javascript">
+function T(str){
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}
+var n = 2;
+
+function initUI(){
+	T("#showBox").style.width =  parseFloat(getStyle(T("#mirrorBox"),"width"))*n+"px";
+	T("#showBox").style.height = parseFloat(getStyle(T("#mirrorBox"),"height"))*n+"px";
+	T("#showBox").style.backgroundSize = T("#bigBox").offsetWidth*n +"px "+T("#bigBox").offsetHeight*n+"px";
+}
+window.onload = function(){
+	initUI();
+
+
+
+	T("#showBox").onmouseover = function(event){
+		let evt = event || window.event;
+		evt.stopPropagation();
+	}
+	
+	T("#bigBox").onmouseover = function(){
+		 T("#mirrorBox").style.display ="block";
+		 T("#showBox").style.display ="block";
+	}
+	
+	T("#bigBox").onmouseout = function(){
+		 T("#mirrorBox").style.display ="none";
+		 T("#showBox").style.display ="none";
+	}
+
+
+	T("#bigBox").onmousemove = function(event){
+		let evt = event || window.event;
+		//1、数据
+		let mirrorWidth = T("#mirrorBox").offsetWidth;
+		let mirrorHeight = T("#mirrorBox").offsetHeight;
+		let left1 = evt.pageX-this.offsetLeft-mirrorWidth/2;
+		let top1 = evt.pageY-this.offsetTop-mirrorHeight/2;
+		
+		//2、边界
+		if(left1<0){
+			left1=0;
+		}
+		if(left1>this.offsetWidth-mirrorWidth){
+			left1=this.offsetWidth-mirrorWidth
+		}
+		
+		if(top1<0){
+			top1=0;
+		}
+		if(top1>this.offsetHeight-mirrorHeight-10){
+			top1=this.offsetHeight-mirrorHeight-10
+		}
+		//3、改变外观
+		T("#mirrorBox").style.left = left1+"px";
+		T("#mirrorBox").style.top = top1+"px";
+		T("#showBox").style.backgroundPosition = (-n*left1)+"px "+(-n*top1)+"px";
+	}
+
+	// window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["tsina","tqq","qzone"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","tqq","qzone"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+
+	T(".inp")[0].onfocus = function(){
+			T(".inp")[0].placeholder="";
+			T(".knief")[0].style.display ="none";
+			T(".wind")[0].style.display ="none";
+			T(".inp")[0].style.outline = "none";
+		}
+
+		T(".inp")[0].onblur = function(){
+			T(".inp")[0].placeholder="剃须刀";
+			T(".knief")[0].style.display ="block";
+			T(".wind")[0].style.display ="block";
+		}
+		
+		T("#w").onmouseover = function(){
+			T("#im1").style.display="block";
+		}
+		T("#w").onmouseout = function(){
+			T("#im1").style.display="none";
+		}
+
+
+		T(".shopcar")[0].onmouseover = function(){
+			T(".shopcar")[0].style.backgroundColor="white";
+			T(".shopcar")[0].style.border="1px solid #288fe7";
+			T(".shopcar")[0].style.borderBottom="none";
+			T("#cs1").src="img/cart.png";
+			T("#sc").style.color="skyblue";
+			T("#lis").style.display="block";
+			T(".dog")[0].style.opacity=1;
+			T(".dog1")[0].style.opacity=1;
+			T("#lis").style.borderTop="none";
+		}
+		T(".shopcar")[0].onmouseout = function(){
+			T(".shopcar")[0].style.backgroundColor="#0c82d9";
+			T(".shopcar")[0].style.border="1px solid #288fe7";
+			T("#cs1").src="img/cartp.png";
+			T("#sc").style.color="white";
+			setTimeout(function(){
+				T(".shopcar")[0].style.backgroundColor="#0c82d9";
+				T(".dog")[0].style.opacity=0;
+				T(".dog1")[0].style.opacity=0;
+				T("#lis").style.display="none";
+			},3000)
+
+		}
+}
+
+</script>

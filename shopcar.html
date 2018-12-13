@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shopcar</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/shopcar.css">
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+</head>
+<body>
+	<div id="mask" class="mask"></div>
+	<header>
+		<div class="header_top">
+			<div class="header_left">
+				<i class="iconfont icon-wujiaoxing-copy"><a href="#">收藏</a></i>
+				<i class="iconfont icon-yingdaicon04" id="w"><a  class="wx" href="#">微信</a>
+			<!-- 	<img id="im1" src="img/weixin.jpg" alt=""> -->
+				</i>
+
+			</div>
+			<div class="header_right">
+				<a class="fa" href="login.html">登录</a>|
+				<a class="la" href="regist.html">注册</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- section -->
+	<section>
+	<div class="sect">
+		<div class="sec">
+				<img id="im1" src="img/weixin.jpg" alt="">
+				<img onclick="location='index.html'" class="limg" src="img/logo.gif">
+				<a class="home">
+					<img class="himg" src="img/home.jpg"><span>首页</span>
+				<a>
+				
+				<form class="tex">
+					<a class="knief" href="#">剃须刀</a>
+					<a class="wind" href="#">电吹风</a>
+					<input  placeholder="剃须刀" class="inp" type="text"/>
+					<div class="search">
+						<a href="#"><img src="img/searchbg.png"></a>
+					</div>
+				</form>
+				<div class="dog" style="height:55px;width:1px;float:left;background-color:#288fe7;margin-top:35px;margin-left:18px;opacity:0"></div>
+				<div class="shopcar">
+					<a id="sh" href=""><img id="cs1" src="img/cartp.png"></a>
+					<a id="sc" href="#">购物车(<span id="c1">0</span>)</a>
+					<div id="lis">
+						<div id="liss">
+							<!-- <div class="infor" style="width:295px;height:100px">
+								<div class="inform" style="margin-left:10px;float:left">
+									<div class="imp" style="float:left">
+										<img src="img/FS375_000_01.jpg" style="width:80px;height:80px;float:left" alt="">
+										<h4 style="float:left;color:black"><span>飞科智能剃须刀FS375</span></h4>
+									</div>
+								</div>
+								<p class="words" style="margin-left:20px;margin-top:10px;float:left"><span>139</span>元x<span>1</span></p>
+							</div> -->
+
+							<div style="width:295px;height:45px">
+								<div class="fq" style="float:left;">
+									<h1>共计<span id="c2">0</span>件商品</h1>
+									<p>合计：<span id="c3">0</span>元</p>
+								</div>
+								<input onclick="location='shopcar.html'" style="float:left;"" class="ut" type="button" value="去购物车结算">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dog1" style="height:56px;width:1px;float:left;background-color:#288fe7;margin-left:-1px;margin-top:35px;opacity:0"></div>
+			</div>
+	</section>
+
+	<div class="content">
+		<div class="shed">
+			<img src="img1/cart_tit.png" alt="">
+		</div>
+
+		<table class="tab">
+			<tr class="firstline">
+				<td>
+					<input id ="checkall" type="checkbox">
+				</td>
+				<td>
+					商品
+				</td>
+				<td>单价</td>
+				<td>数量</td>
+				<td>小计</td>
+				<td>操作</td>
+			</tr>
+
+			<tr class="secondline">
+				<!-- <td>
+					<input type="radio">
+				</td>
+				<td class="sectd">
+					<div>
+						<img id="bg1" src="img1/FS375_000_01.jpg" alt="">
+						<p class="p1">飞科智能剃须刀FS375</p>
+					</div>
+				</td>
+				<td>￥<span>139</span></td>
+				<td class="thtd">
+					<a href="javacript:void(0)">-</a>
+					<input type="text" id="sp1">
+					<a href="javacript:void(0)">+</a>
+				</td>
+				<td>
+					￥<span id="smallcount">834</span>
+				</td>
+				<td>
+					<span id="del">删除</span>
+				</td> -->
+			</tr>
+		</table>
+
+		<div class="clear">
+			<a href=""><img src="img1/del.png" alt=""></a>
+			<span id="clearalls" style="cursor:pointer">清空购物车</span>
+			<a href=""><img src="img1/del.png" alt=""></a>
+			<span id="cleardelss" style="cursor:pointer">删除选中项</span>
+		</div>
+		<p class="suma">商品总计:<span id="font">$<span id="fonts">0</span>元</span></p>
+			<p>
+		<div class="sum">
+			<a href="index.html">继续购物</a>
+			<a href="javascript:void(0)">去结账</a>
+			</p>
+		</div>
+	</div>
+	<!-- foot -->
+	<div class="foot">
+		<div class="foots">
+			<div class="footss fooo">
+				<img src="img/ensure.png" alt="">
+				<span>领导品牌 品质保证</span>
+			</div>
+			<div class="footss">
+				<img src="img/return.png" alt="">
+				<span>七天退货 15天退货</span>
+			</div>
+			<div class="footss">
+				<img src="img/free.png" alt="">
+				<span>全场免运费（部分配件除外）</span>
+			</div>
+			<div class="footss foo">
+				<img src="img/unprofor.png" alt="">
+				<span>全国网点 联保服务</span>
+			</div>
+		</div>
+		<div class="service">
+			<ul>
+				<li>购物服务</li>
+				<li><a href="#">购物指南</a></li>
+				<li><a href="#">配送方式</a></li>
+				<li><a href="#">支付方式</a></li>
+			</ul>
+			<ul>
+				<li>服务支持</li>
+				<li><a href="#">积分规则</a></li>
+				<li><a href="#">保修政策</a></li>
+				<li><a href="#">服务网点</a></li>
+			</ul>
+			<ul>
+				<li>关注我们</li>
+				<li><a href="#">新浪微博</a></li>
+				<li><a href="#">关注微信</a></li>
+				<li><a href="#">APP下载</a></li>
+			</ul>
+			<ul>
+				<li>关于飞科</li>
+				<li><a href="#">飞科新闻</a></li>
+				<li><a href="#">飞科介绍</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+
+			<div class="mark">
+				<img src="img/qr_code.jpg" alt="">
+				<p>关注飞科电器官方微信</p>
+			</div>
+
+			<div class="mark1">
+				<img src="img/service1.png" alt="">
+			</div>
+		</div>
+		<div class="footer">
+			<img class="imgs" src="img/minilogo.jpg" alt="">
+			<div class="fm">
+				<p>Copyright © 2013-2016上海飞科电器股份有限公司 | 版权所有 | 网站备案许可证号：沪ICP备13041208号
+				<a href="#">增值电信营业厅经营许可证：沪B2-20160083 |<img src="img/fkab.png" alt="">公安网备案31010502001314</a>
+				</p>
+			</div>
+			<div class="sqa">
+					<a href="#"><img src="img/rightimg1.jpg" alt=""></a>
+					<span></span>
+					<a href="#"><img src="img/rightimg2.jpg" alt=""></a>
+					<span></span>
+					<a href="#"><img src="img/rightimg3.jpg" alt=""></a>
+					<span></span>
+					<a id="lm" href="#"><img src="img/rightimg4.jpg" alt=""></a>
+			</div>
+		</div>
+	</div>
+	<div class="win">
+		<p id="cl2" style="margin-left:500px;margin-top:20px;cursor:pointer;"><b>X</b></p>
+		<div style="width:592px;height:82px">
+			<img style="float:left;margin-top:27px;margin-left:190px;" src="img1/success.png" alt="">
+			<h3 style="float:left;margin-top:27px;margin-left:10px">确定删除这件产品</h3>
+		</div>
+		<div style="width:592px;height:105px;">
+			<span class="pagess">确定</span>
+			<span class="close">取消</span>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="js/cookieTools.js"></script>
+<script type="text/javascript" src="js/shopcar.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js" ></script>
+<script type="text/javascript" src="js/checkall.js"></script>
+<script type="text/javascript">
+function T(str){
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}
+window.onload= function(){
+		T(".inp")[0].onfocus = function(){
+			T(".inp")[0].placeholder="";
+			T(".knief")[0].style.display ="none";
+			T(".wind")[0].style.display ="none";
+			T(".inp")[0].style.outline = "none";
+		}
+
+		T(".inp")[0].onblur = function(){
+			T(".inp")[0].placeholder="剃须刀";
+			T(".knief")[0].style.display ="block";
+			T(".wind")[0].style.display ="block";
+		}
+		
+		T("#w").onmouseover = function(){
+			T("#im1").style.display="block";
+		}
+		T("#w").onmouseout = function(){
+			T("#im1").style.display="none";
+		}
+
+
+		T(".shopcar")[0].onmouseover = function(){
+			T(".shopcar")[0].style.backgroundColor="white";
+			T(".shopcar")[0].style.border="1px solid #288fe7";
+			T(".shopcar")[0].style.borderBottom="none";
+			T("#cs1").src="img/cart.png";
+			T("#sc").style.color="skyblue";
+			T("#lis").style.display="block";
+			T(".dog")[0].style.opacity=1;
+			T(".dog1")[0].style.opacity=1;
+			T("#lis").style.borderTop="none";
+		}
+		T(".shopcar")[0].onmouseout = function(){
+			T(".shopcar")[0].style.backgroundColor="#0c82d9";
+			T(".shopcar")[0].style.border="1px solid #288fe7";
+			T("#cs1").src="img/cartp.png";
+			T("#sc").style.color="white";
+			setTimeout(function(){
+				T(".shopcar")[0].style.backgroundColor="#0c82d9";
+				T(".dog")[0].style.opacity=0;
+				T(".dog1")[0].style.opacity=0;
+				T("#lis").style.display="none";
+			},3000)
+
+		}
+}
+
+$(function(){
+	$("#checkall").bindCheckAll($(":checkbox").not("#checkall"));
+})
+</script>
