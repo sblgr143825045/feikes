@@ -63,6 +63,16 @@ $(function(){
 		$(".random").html(str);
 	})
 
+	$("#yzm").blur(function(){
+		if($("#yzm").val()!=$("#please").val()){
+			$("#spanError3").css("display","block");
+			$("#spanError3").html("验证码输入有误");	
+		}else{
+			$("#spanError3").css("display","block");
+			$("#spanError3").html("");
+		}
+	})
+
 
 	var arr = [];
 	if(getCookie("shopcar")!=null && getCookie("shopcar")!=undefined){

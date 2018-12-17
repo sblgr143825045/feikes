@@ -1,0 +1,33 @@
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,td,input,select,textarea,figure{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family:"微软雅黑",Arial;
+}
+a{	
+	text-decoration:none;
+}
+li{
+	list-style:none;
+}
+img{
+	border:none;
+}
+
+
+.pic{
+	width:100%;
+	background-color:#1c5ce4;
+}
+.pics{
+	width:100%
+	margin:0 auto;
+}
+.last{
+	width:1240px;
+	margin:0 auto;
+}
+.pics img{
+	display:block;
+}

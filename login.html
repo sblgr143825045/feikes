@@ -297,6 +297,10 @@ function showData(str){
 			addCookie("username",T("#username").value,14);
 			addCookie("userpass",T("#userpass").value,14);
 			location.href="index.html";
+		}else{
+			location.href="index.html";
+			addCookie("username",T("#username").value,1);
+			addCookie("userpass",T("#userpass").value,1);
 		}
 	}
 }

@@ -193,26 +193,33 @@ section{
 	margin-left:10px;
 }
 #banners{
-	width:100%;
-	height:460px;
-	position:relative;
-}
-#banner{
-	position:relative;
 	width:1240px;
 	height:460px;
 	margin:0 auto;
-
+}
+#banner{
+	position:absolute;
+	width:1240px;
+	height:460px;
+	margin:0 auto;
+}
+.listss{
+	position:absolute;
+	width:1240px;
+	height:460px;
+	margin:0 auto;
 }
 .goodlist{
 	position:absolute;
-	left:0px;
+	left:0;
 	top:0;
+	margin:0 auto;
 	padding-top:22px;
 	padding-bottom:18px;
 	background-color:#1b2c44;
 	width:183px;
 	height:419px;
+	z-index:1;
 	opacity:0.6;
 }
 .goodlist a li{
@@ -238,6 +245,8 @@ section{
 	position:absolute;
 	left:184px;
 	top:0;
+	opacity:1;
+	z-index:999;
 	width:521px;
 	height:458px;
 	background:white;

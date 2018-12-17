@@ -1,5 +1,6 @@
 $(function(){
 
+	// showDate();
 	var arr = [];
 	if(getCookie("shopcar")!=null && getCookie("shopcar")!=undefined){
 		arr = JSON.parse(getCookie("shopcar"))
@@ -18,6 +19,27 @@ $(function(){
 		$("#smallcount").html(total);	
 	}
 
+	// ajax180803({
+	// 	"url":"getGoodsList.php",
+	// 	"method":"post",
+	// 	"func":showDate,
+	// 	"isAsync":false
+	// })
+	
+	$.ajax({
+		type:"POST",
+		url:"getGoodsList.php",
+		dataType:"json",
+		async:true,
+		success:function(data){
+			console.log(data);
 
+		// for(let i in data){
+		var length = $(data).length;
+		$(".feike").prepend('<div class="feike1"><div class="feike2"><h3><a href="#">'+data[length-1].goodsName+'<span class="ids">'+data[length-1].goodsId+'</span></a></h3><h5><a href="#">'+data[length-1].goodsDesc+'</a></h5><h4><a href="#">'+data[length-1].goodsPrice+'元</a><span>339元</span></h4></div><a href="goolis.html"><img src='+data[length-1].goodsImg+' alt=""></a></div>');
+		}
+
+		// }
+	})
 	
 })
